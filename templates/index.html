@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>TolyaFon</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../static/mdb.min.css">
+  <link rel="stylesheet" href="../static/style.css">
+  <link rel="stylesheet" href="../static/contentblock.css">
+  <link rel="stylesheet" href="../static/media.css">
+  <link rel="stylesheet" href="../static/overlay.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+  <div class='homepage' id='vstavka'>
+    <div id='back'>
+      <!--Navbar-->
+        <nav class="navbar navbar-expand-md" id='navbar'>
+            <span id='firstNavElement'>
+            <a class="navbar-brand brandU" href="#">TolyaFon</a>
+            </span>
+            <button class="navbar-toggler third-button" type="button" data-toggle="collapse" data-target="#collapsibleNavbar"
+             aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
+             <span style="font-size:30px;cursor:pointer">☰</span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+              <ul class="navbar-nav align-middle" id='user_navbar'>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section1">О&nbsp;нас</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section2">Статус&nbsp;заказа</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#section3">Новый&nbsp;заказ</a>
+                </li>    
+              </ul>
+            </div>  
+          </nav>
+      <!--Content-->
+      <div class="banner" id='section1'>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="bannertext">
+                        <h4 class="banner-category">TolyaFon</h4>
+                        <h2>Если ваш телефон апять начинает, вам к нам!</h2>
+                        <p>Мы рады приветсвовать вас на нашем сайте! Зарегистрируйтесь или войдите для оформления заказа</p>
+                        <div id='users_button'>
+                          <button class="enter-btn btn" onclick="UserLogin_click()">Войти</button>
+                          <button class="reg-btn btn" onclick="UserReg_click()">Регистрация</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner-img">
+                        <img src="https://cdn.discordapp.com/attachments/783709006258503691/787309349080137738/tolyafon.png" alt="image" width='65%' id='bannerImg' class="img-fluid"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>  
+    <div class='content-between mb-4' id="section2">
+      <div class='container priceblock'>
+        <div class='row'>
+          <div class='col-12 orderStatus'>
+            <div class='row'>
+              <div class='col-12'>
+                <p class='headItem h3 c'>Проверить статус заказа</p>
+              </div>
+              <div class='col-12'>
+              <input class="form-control" type="text" placeholder="Номер заказа" id="order-input">
+              </div>
+              <div class='col-12'>
+              <button class="reg-btn btn" onclick='OrderStatus()'>Проверить</button>
+              </div>
+            </div>
+          </div>
+          <div class='col-12 col-md-8' id='OrderInfo'>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class='container-fluid neworder mb-4' id='section3'>
+      <div class='container neworderblock'>
+        <div class='row' id='joinOrder'>
+          <div class='col-12 message pt-4 h5'>
+           <p>Для создания заявки необходимо войти в аккаунт или зарегистрироваться</p> 
+          </div>
+          <div class='col-12'>
+            <button class="ent-btn btn mb-4" onclick='ShowMakeOrdersWindow()'>Cоздать&nbsp;заявку</button>
+          </div>
+          <div class='col-12 message pb-4'>
+            <button class="enter-btn btn" onclick="UserLogin_click()">Войти</button>
+            <button class="reg-btn btn" onclick="UserReg_click()">Регистрация</button>
+          </div>
+        </div> 
+        <div class='row' id='orderSection'>
+          <div class='col-12 headItem h3'>Оформить&nbsp;заказ</div>
+          <div class='col-12'>
+            <form>
+              <span class='bodyItem'>Марка&nbsp;телефона</span>
+              <select id='manufacturer' class='form-control mb-2' name='man_name' onchange='getModel(this)'>
+              </select>
+              <input class="form-control" type="text" placeholder="Марка телефона" id="manufacturer-input">
+            </form>
+          </div>
+            <div class='col-12'>
+              <form>
+                <span class='bodyItem'>Модель&nbsp;телефона</span>
+                <select id='models' class='form-control mb-2' name='mod_name' onchange='Model(this)'>
+                <option value='others'>другая</option>
+                </select>
+                <input class="form-control" type="text" placeholder="Модель телефона" id="model-input">
+              </form>
+            </div>
+            <div class='col-12'>
+              <form>
+                <span class='bodyItem'>Проблема</span>
+                <input class="form-control" type="text" placeholder="проблема" id="problem-input">
+              </form>
+            </div>
+            <div class='col-12'>
+              <form>
+                <span class='bodyItem'>Выбрать&nbsp;мастера</span>
+                <select id='masters' class='form-control mb-2' name='master_name'>
+                </select>
+              </form>
+            </div>
+            <div class='col-12'>
+              <button class="ent-btn btn mb-4" onclick='MakeOrder()'>Отправить&nbsp;заявку</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div id="LoginPage" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeOver()">×</a>
+      <div class="overlay-content">
+        <div class='container user_act_Window'>
+          <div class='row justify-content-center align-items-center'>
+            <div class='col-12 mb-5'>
+              <button class="ent-btn btn" onclick="SwitchMenu('do_login')">Войти</button>
+              <button class="reg-btn btn" onclick="SwitchMenu('do_registr')">Регистрация</button>
+            </div>
+            <div class='col-12 col-xl-4 user_enteres_blocks' id='do_login'>
+                <div id='warningLogMessage'></div>
+                <span class='bodyItem'>login&nbsp;<i class="fa fa-user icon"></i></span>
+                <input class="form-control warLog" type="text" placeholder="*login" id="login-input">
+                <span class='bodyItem'>password&nbsp;<i class="fa fa-key icon"></i></span>
+                <input class="form-control warLog" type="password" placeholder="*password" id="password-input">
+                <button class="act-btn btn" onclick="user_login('','')">Войти</button>
+            </div>
+            <div class='col-12 col-xl-4 user_enteres_blocks' id='do_registr'>
+                <div id='warningRegMessage'></div>
+                <span class='bodyItem'>login&nbsp;<i class="fa fa-user icon"></i></span>
+                <input class="form-control war" type="text" placeholder="*login" id="login-reg-input">
+                <span class='bodyItem'>password&nbsp;<i class="fa fa-key icon"></i></span>
+                <input class="form-control war" type="password" placeholder="*password" id="password-reg-input">
+                <span class='bodyItem'>ФИО</span>
+                <input class="form-control war" type="text" placeholder="*ФИО" id="fio-reg-input">
+                <span class='bodyItem'>Дата&nbsp;рождения</span>
+                <input class="form-control war" type="date" placeholder="*YYYY-MM-DD" name='date' id="date">
+                <span class='bodyItem'>Номер&nbsp;телефона</span>
+                <input class="form-control war" type="text" placeholder="*номер телефона" id="tel-reg-input">
+                <button class="act-btn btn" onclick="user_reg()">Зарегистрироваться</button>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     <div id="MoreAbDevice" class="overlay">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeMoreOver()">×</a>
+      <div class="overlay-content comploverlay">
+      </div>
+    </div>
+  </div>   
+  <div class="jumbotron text-center" style="margin-bottom:0">
+    <a href='https://github.com/istrebitel-1' target='_blank'>istrebitel-1</a>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script type="text/javascript" src="../static/js/mdb.min.js"></script>
+  <script src="../static/script.js"></script>
+  <script src="../static/orderStatus.js"></script>
+</body>
+</html>

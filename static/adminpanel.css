@@ -1,0 +1,65 @@
+body,html{
+    height:100%;
+}
+.vhod{
+    background: linear-gradient(90deg, #7764CA 0%, #6474CA 100%);
+    box-shadow: 0 0.75rem 2.25rem rgba(92, 141, 255, 0.12);
+    color: #fff;
+    width: 100%;
+    border-radius: 1%;
+}
+.vhod:hover{
+    background: linear-gradient(90deg, #4d3ba8 0%, #3b49a8 100%) !important;
+}
+.form-group{
+    margin-top: 10px;
+}
+.btn-login{
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.btn-login:hover{
+    background-color: #FFF;
+    color: #7764CA;
+}
+.btn-funct{
+    background: #7764CA;
+    border: 2px solid #7764CA;
+    border-radius: 5px;
+    color: #FFF;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.btn-funct:hover{
+    background: transparent;
+    color: #7764CA;
+}
+
+.btn-docx{
+    background: #6b5de7;
+    border: 2px solid #6b5de7;
+}
+.btn-docx:hover{
+    color: #6b5de7;
+}
+
+.btn-xls{
+    background: #29ad67;
+    border: 2px solid #29ad67;
+}
+.btn-xls:hover{
+    color: #29ad67;
+}
+.btn-pdf{
+    background: #ac282f;
+    border: 2px solid #ac282f;
+}
+.btn-pdf:hover{
+    color: #ac282f;
+}

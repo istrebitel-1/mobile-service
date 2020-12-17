@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin tool</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/adminpanel.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+</head>
+<body>
+    <div class='container h-100' id='admin_login_check'>
+        <div class='row h-100 justify-content-center align-items-center'>
+            <div class='col-4 vhod'>
+                <div class='row'>
+                    <div class='col-12 text-center'>
+                        <span class='bodyItem'>Admin&nbsp;panel&nbsp;<i class="fa fa-lock"></i></span>
+                    </div>
+                    <div class='col-12 text-center'>
+                        <span class='bodyItem'>Only&nbsp;for&nbsp;Desktop&nbsp;<i class="fa fa-desktop"></i></span>
+                    </div>
+                    <div class='col-12'>        
+                        <label for="InputEmail1">Username</label>
+                        <i class="fa fa-user icon"></i>
+                        <input id="InputLogin" type='text' class="form-control" placeholder="Username">
+                        <label for="InputPassword">Password</label>
+                        <i class="fa fa-key icon"></i>
+                        <input type="password" class="form-control" id="InputPassword" placeholder="Password">
+                        <button  class="btn btn-login mt-2" type="button" onclick="login_check()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='homepage' id='admin_login_site'>
+        <div class='container'>
+            <div class='row justify-content-center align-items-center' id='admin_act_role'></div>
+        </div>
+        <div class='container mt-5' id='reports'></div>
+    </div>
+    <script type="text/javascript" src='../static/admintool.js'></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</body>
+</html> 
