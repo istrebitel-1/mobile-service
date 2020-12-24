@@ -1,4 +1,4 @@
-# mobile-service# Mobile service web app
+# Mobile service web app
 Course project.
 
 ### Installation
